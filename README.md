@@ -8,7 +8,6 @@ The project applies concepts such as **multithreading, object-oriented programmi
 
 ---
 
-## Screenshots
 
 ### Traffic Simulation
 
