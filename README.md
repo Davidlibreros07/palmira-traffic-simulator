@@ -277,6 +277,6 @@ This project was developed as a collaborative academic project at **Universidad 
 
 Developed collaboratively by:
 
+- Jose David Libreros Alvarez
 - Juan Diego Garces Orejuela
 - Samuel Steban Granda Munoz
-- Jose David Libreros Alvarez
