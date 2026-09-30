@@ -14,7 +14,7 @@ The project applies concepts such as **multithreading, object-oriented programmi
 
 The main simulation interface displays autonomous civilian and emergency vehicles moving through the map while incidents are generated dynamically.
 
-![Traffic simulation](doc/screenshots/traffic-simulation.png)
+![Traffic simulation](doc/screenshots/traffic-simulator.png)
 
 ### Incident Management
 
