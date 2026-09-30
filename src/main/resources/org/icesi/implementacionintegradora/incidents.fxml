@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.icesi.implementacionintegradora.controllers.IncidentsController">
+    <top>
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+            <children>
+                <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="GESTIÓN DE INCIDENTES - PALMIRA" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <HBox spacing="20.0" style="-fx-padding: 20;">
+            <children>
+                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="INCIDENTES ACTIVOS (Ordenados por Prioridad)" />
+                        <TableView fx:id="incidentsTable" prefHeight="400.0">
+                            <columns>
+                                <TableColumn fx:id="typeColumn" prefWidth="100.0" text="Tipo" />
+                                <TableColumn fx:id="priorityColumn" prefWidth="80.0" text="Prioridad" />
+                                <TableColumn fx:id="locationColumn" prefWidth="120.0" text="Ubicación" />
+                                <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Estado" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox spacing="15.0" style="-fx-min-width: 350; -fx-background-color: #ecf0f1; -fx-padding: 20; -fx-background-radius: 10;">
+                    <children>
+                        <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="ASIGNACIÓN CON TECLADO" />
+
+                        <Label style="-fx-font-size: 14px; -fx-text-fill: #34495e; -fx-font-weight: bold;" text="📋 INSTRUCCIONES:" />
+                        <Label style="-fx-font-size: 13px; -fx-text-fill: #2c3e50;" text="1. Selecciona un incidente en la tabla" />
+                        <Label style="-fx-font-size: 13px; -fx-text-fill: #2c3e50;" text="2. Presiona una tecla numérica:" />
+
+                        <VBox spacing="8.0" style="-fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;">
+                            <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: #3498db; -fx-font-weight: bold;" text="🚔 Tecla 1 = PATRULLA" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • Especializada en ROBOS" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • También atiende ACCIDENTES" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8.0" style="-fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;">
+                            <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: #e74c3c; -fx-font-weight: bold;" text="🚑 Tecla 2 = AMBULANCIA" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • Especializada en ACCIDENTES" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • Máxima prioridad y velocidad" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8.0" style="-fx-padding: 10; -fx-background-color: white; -fx-background-radius: 5;">
+                            <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: #e74c3c; -fx-font-weight: bold;" text="🚒 Tecla 3 = BOMBERO" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • Especializada en INCENDIOS" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="   • Alta prioridad" />
+                            </children>
+                        </VBox>
+
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #27ae60; -fx-font-weight: bold;" text="✅ Asignación automática del mejor vehículo disponible" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #f39c12; -fx-font-weight: bold;" text="⚡ +10 puntos por asignación exitosa" />
+
+                        <Label style="-fx-font-size: 11px; -fx-text-fill: #95a5a6; -fx-wrap-text: true;" text="El sistema verificará automáticamente la compatibilidad entre el vehículo y el tipo de incidente." />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #34495e; -fx-padding: 15;">
+            <children>
+                <Button onAction="#backToGame" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;" text="🗺️ Volver al Mapa" />
+                <Button onAction="#showMonitoring" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;" text="📊 Centro de Monitoreo" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

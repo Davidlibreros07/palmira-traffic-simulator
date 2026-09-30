@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.icesi.implementacionintegradora.controllers.GameController">
+    <center>
+        <Canvas fx:id="mapCanvas" height="600.0" width="1000.0" />
+    </center>
+    <top>
+        <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <children>
+                <Label fx:id="scoreLabel" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Puntuación: 0" />
+                <Label fx:id="vehicleCountLabel" style="-fx-text-fill: white; -fx-font-size: 14px;" text="Vehículos - P: 3, A: 2, B: 2 | Civiles: 5" />
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #34495e; -fx-padding: 15;">
+            <children>
+                <Button onAction="#showMonitoring" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Centro de Monitoreo" />
+                <Button onAction="#showIncidents" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Gestión de Incidentes" />
+                <Button onAction="#showManual" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold;" text="Manual de Usuario" />
+            </children>
+        </HBox>
+    </bottom>
+    <left>
+        <VBox spacing="10.0" style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <children>
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="CONTROLES:" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="W - Arriba" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="S - Abajo" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="A - Izquierda" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="D - Derecha" />
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 0 0 0;" text="LEYENDA:" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="P - Patrulla" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="A - Ambulancia" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="B - Bombero" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="C - Civil" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="R - Robo" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="F - Incendio" />
+                <Label style="-fx-text-fill: white; -fx-font-size: 12px;" text="A - Accidente" />
+            </children>
+        </VBox>
+    </left>
+</BorderPane>
